@@ -4,12 +4,25 @@
     {
         static void Main(string[] args)
         {
+            List<Animal> animals = new List<Animal>();
+
             Animal kängru = new Animal("Kängrun koko", "orange", 2, 35, 12);
+            animals.Add(kängru);
+           
             Elephant elefant = new Elephant();
+            animals.Add(elefant);
+           
             Lion lejon = new Lion();
+            animals.Add(lejon);
+           
             Zebra zebra = new Zebra();
+            animals.Add(zebra);
+           
             AfricanSavannahElephant savanaElefanten = new AfricanSavannahElephant();
+            animals.Add(savanaElefanten);
+           
             AfricanForestElephant skogsElefanten = new AfricanForestElephant();
+            animals.Add(skogsElefanten);
 
             Console.WriteLine(kängru._name);
             kängru.tryEscape();
@@ -49,6 +62,12 @@
             skogsElefanten.waveTrunk();
             Console.WriteLine(skogsElefanten._lenght);
             skogsElefanten.makeSound();
+
+            foreach (Animal animal in animals)
+            {
+                animal.AddInfo();
+                Console.WriteLine();
+            }
         }
     }
 }

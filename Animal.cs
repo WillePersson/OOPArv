@@ -25,19 +25,27 @@ namespace OOPArv
         }
         public void tryEscape() //Method
         {
-            Console.WriteLine("Djuret försöker fly, det gick inte bra");
+            Console.WriteLine(_name + " försöker fly, det gick inte bra");
         }
         public void sleep() //Method
         {
-            Console.WriteLine("Djuret sover");
+            Console.WriteLine(_name + " sover");
         }
         public void awake() //Method
         {
-            Console.WriteLine("Djuret vaknade");
+            Console.WriteLine(_name + " vaknade");
         }
         public virtual void makeSound() //method
         {
-            Console.WriteLine("Djuret låter jättehögt");
+            Console.WriteLine(_name + " låter på någe viss");
+        }
+        public virtual void AddInfo()
+        {
+            Console.WriteLine(_name +
+                $" Färg: {_color} " +
+                $"Antal Ben: {_legs} " +
+                $"Vikt: {_weight} " +
+                $"Ålder: {_age}");
         }
     }
     class Elephant : Animal //inheritance class from Animal
@@ -59,6 +67,15 @@ namespace OOPArv
         {
             Console.WriteLine("Elefanten låter genom snabbeln");
         }
+        public override void AddInfo()
+        {
+            Console.WriteLine(_name +
+                $" Färg: {_color} " +
+                $"Antal Ben: {_legs} " +
+                $"Vikt: {_weight} " +
+                $"Ålder: {_age} " +
+                $"Horn: {_horns}" );
+        }
     }
     class Lion : Animal //inheritance class from Animal
     {
@@ -78,6 +95,17 @@ namespace OOPArv
         public override void makeSound() //overiding method
         {
             Console.WriteLine("Lejonet ryter");
+        }
+        public override void AddInfo()
+        {
+            Console.WriteLine(_name +
+                $" Färg: {_color} " +
+                $"Antal Ben: {_legs} " +
+                $"Vikt: {_weight} " +
+                $"Ålder: {_age} " +
+                $"Tänder: {_teeth} ");
+
+
         }
     }
     class Zebra : Animal //inheritance class from Animal
@@ -99,6 +127,15 @@ namespace OOPArv
         {
             Console.WriteLine("Zebran är sjuk så den låter inte så mycket");
         }
+        public override void AddInfo()
+        {
+            Console.WriteLine(_name +
+                $" Färg: {_color} " +
+                $"Antal Ben: {_legs} " +
+                $"Vikt: {_weight} " +
+                $"Ålder: {_age} " +
+                $"Svarta ränder: {_blackStripes}");
+        }
 
     }
     class AfricanSavannahElephant : Elephant //inheritance class from Elephant
@@ -112,6 +149,10 @@ namespace OOPArv
         public override void makeSound() //Method
         {
             Console.WriteLine("Savana elefanten låter högt");
+        }
+        public override void AddInfo()
+        {
+
         }
 
 
@@ -127,6 +168,10 @@ namespace OOPArv
         public override void makeSound() //Method
         {
             Console.WriteLine("Skogs elefanten låter inte så högt");
+        }
+        public override void AddInfo()
+        {
+
         }
 
     }
