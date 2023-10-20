@@ -24,50 +24,39 @@
             AfricanForestElephant skogsElefanten = new AfricanForestElephant();
             animals.Add(skogsElefanten);
 
-            Console.WriteLine(kängru._name);
-            kängru.tryEscape();
-            kängru.makeSound();
-
-            Console.WriteLine();
-
-            Console.WriteLine(elefant._name);
-            Console.WriteLine(elefant._horns);
-            elefant.waveTrunk();
-            elefant.makeSound();
-
-            Console.WriteLine();
-
-            Console.WriteLine(lejon._name);
-            Console.WriteLine(lejon._teeth);
-            Console.WriteLine(lejon._weight);
-            lejon.Hungry();
-            lejon.makeSound();
-
-            Console.WriteLine();
-
-            Console.WriteLine(zebra._name);
-            zebra.hide();
-            Console.WriteLine(zebra._blackStripes);
-            Console.WriteLine(zebra._legs);
-            zebra.makeSound();
-
-            Console.WriteLine();
-
-            savanaElefanten.waveTrunk();
-            Console.WriteLine(savanaElefanten._lenghtofTrunk);
-            savanaElefanten.makeSound();
-
-            Console.WriteLine();
-
-            skogsElefanten.waveTrunk();
-            Console.WriteLine(skogsElefanten._lenght);
-            skogsElefanten.makeSound();
 
             foreach (Animal animal in animals)
             {
                 animal.AddInfo();
                 Console.WriteLine();
             }
+            kängru.tryEscape();
+            kängru.makeSound();
+
+            Console.WriteLine();
+
+            elefant.waveTrunk();
+            elefant.makeSound();
+
+            Console.WriteLine();
+
+            lejon.Hungry();
+            lejon.makeSound();
+
+            Console.WriteLine();
+
+            zebra.hide();
+            zebra.makeSound();
+
+            Console.WriteLine();
+
+            savanaElefanten.waveTrunk();
+            savanaElefanten.makeSound();
+
+            Console.WriteLine();
+
+            skogsElefanten.waveTrunk();
+            skogsElefanten.makeSound();
         }
     }
 }

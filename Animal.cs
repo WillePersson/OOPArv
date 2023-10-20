@@ -140,7 +140,12 @@ namespace OOPArv
     }
     class AfricanSavannahElephant : Elephant //inheritance class from Elephant
     {
-        public double _lenghtofTrunk = 1.5;//field
+        public double _lenghtofTrunk;//field
+
+        public AfricanSavannahElephant(double lenghtofTrunk = 1.5, int horns = 2)
+        {
+            _lenghtofTrunk = lenghtofTrunk;
+        }
 
         public override void waveTrunk() //Method
         {
@@ -152,14 +157,20 @@ namespace OOPArv
         }
         public override void AddInfo()
         {
-
+            Console.WriteLine($"längd på snabbel:{_lenghtofTrunk}" +
+                $" Antal horn: {_horns} ");
         }
 
 
     }
     class AfricanForestElephant : Elephant //inheritance class from Elephant
     {
-        public int _lenght = 4;//field
+        public int _lenght;//field
+
+        public AfricanForestElephant(int lenght = 4, int horns = 2)
+        {
+            _lenght = lenght;
+        }
 
         public override void waveTrunk() //Method
         {
@@ -171,7 +182,8 @@ namespace OOPArv
         }
         public override void AddInfo()
         {
-
+            Console.WriteLine($"längd:{_lenght}" +
+                $" Antal horn: {_horns} ");
         }
 
     }
