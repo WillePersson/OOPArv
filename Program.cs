@@ -1,5 +1,5 @@
 ﻿namespace OOPArv
-{           //wille persson - .NET23 -Labb 6
+{           //wille persson - .NET23 - Labb 6
     internal class Program
     {
         static void Main(string[] args)
