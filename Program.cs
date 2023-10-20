@@ -37,16 +37,20 @@
 
             elefant.waveTrunk();
             elefant.makeSound();
+            elefant.sleep();
 
             Console.WriteLine();
 
             lejon.Hungry();
             lejon.makeSound();
+            lejon.tryEscape();
 
             Console.WriteLine();
 
             zebra.hide();
             zebra.makeSound();
+            zebra.tryEscape();
+            zebra.sleep();
 
             Console.WriteLine();
 
